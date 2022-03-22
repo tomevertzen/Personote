@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <form onSubmit={handleSubmit} className="flex flex-col w-3/6">
+      <form onSubmit={handleSubmit} className="flex flex-col w-3/6 xl:w-2/6">
         <h2 className="text-gray-700 text-3xl  mb-6">Login</h2>
         <label
           className="self-start text-sm font-medium text-gray-700 mb-0.5"
@@ -80,7 +80,7 @@ const Login = () => {
           <label htmlFor="savePassword">Wachtwoord onthouden</label>
         </span>
         <button
-          className="border  h-10 rounded-lg shadow-sm mt-8 bg-green-500 text-white hover:bg-green-600 disabled:bg-gray-200 disabled:text-gray-700 disabled:font-medium"
+          className="border  h-10 rounded-lg shadow-sm mt-8 bg-green-600 text-white hover:bg-green-700 disabled:bg-gray-200 disabled:text-gray-700 disabled:font-medium"
           disabled={loading}
         >
           Inloggen

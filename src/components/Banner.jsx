@@ -5,7 +5,7 @@ import BannerImage from "/assets/img/bannerImg.svg";
 
 const Banner = () => {
   return (
-    <div className="bg-green-500 flex flex-col  justify-center pl-44 relative overflow-hidden">
+    <div className="bg-green-600 flex flex-col  justify-center pl-44 relative overflow-hidden">
       <h1 className="text-white text-6xl font-semibold flex ">
         Personote
         <Icon path={mdiCopyright} size={1} />

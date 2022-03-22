@@ -3,12 +3,14 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 
+import "./Layout.css";
+
 const Layout = ({ children }) => {
   return (
-    <div className="relative">
+    <div className="layout ">
       <Navbar />
       <Header />
-      <main className="bg-sky-400">{children}</main>
+      <main className="bg-yellow-50">{children}</main>
       <Footer />
     </div>
   );
