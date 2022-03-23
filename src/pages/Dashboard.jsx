@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   const handleLogOut = async () => {
     try {
-      await logOut;
+      await logOut();
       navigate("login");
     } catch (error) {
       console.error(error.message);

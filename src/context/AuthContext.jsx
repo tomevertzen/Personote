@@ -12,7 +12,7 @@ import { auth } from "../api/firebase.config";
 const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
-  const [user, setCurrentUser] = useState("");
+  const [currentUser, setCurrentUser] = useState();
 
   function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -37,7 +37,7 @@ export function AuthContextProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, signUp, logIn }}>
+    <AuthContext.Provider value={{ currentUser, signUp, logIn, logOut }}>
       {children}
     </AuthContext.Provider>
   );
