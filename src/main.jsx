@@ -19,11 +19,13 @@ ReactDOM.render(
       <BrowserRouter>
         <Router>
           <Route element={<ProtectedRoutes />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="companies" element={<Companies />} />
-            <Route path="settings" element={<Settings />} />
-            <Route path="calendar" element={<Calendar />} />
-            <Route path="tasks" element={<Tasks />} />
+            <Route element={<Layout />}>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="companies" element={<Companies />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="calendar" element={<Calendar />} />
+              <Route path="tasks" element={<Tasks />} />
+            </Route>
           </Route>
           <Route path="login" element={<LoginPage />} />
         </Router>

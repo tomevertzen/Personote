@@ -3,6 +3,7 @@ import { useAuth } from "./src/context/AuthContext";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { css } from "@emotion/react";
 import { ClipLoader } from "react-spinners";
+import Layout from "./src/layout/Layout";
 
 const ProtectedRoutes = () => {
   const { currentUser } = useAuth();

@@ -1,7 +1,6 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Layout from "../layout/Layout";
 
 const Dashboard = () => {
   const { logOut } = useAuth();
@@ -16,11 +15,7 @@ const Dashboard = () => {
     }
   };
 
-  return (
-    <Layout>
-      <button onClick={handleLogOut}>Uitloggen</button>
-    </Layout>
-  );
+  return <button onClick={handleLogOut}>Uitloggen</button>;
 };
 
 export default Dashboard;

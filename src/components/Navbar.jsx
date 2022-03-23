@@ -1,7 +1,9 @@
 import React from "react";
 import Icon from "@mdi/react";
 import { mdiCopyright } from "@mdi/js";
+import { pages } from "../data/navpages";
 import "boxicons";
+import NavItem from "./NavItem";
 
 const Navbar = () => {
   return (
@@ -12,22 +14,17 @@ const Navbar = () => {
       </h1>
       <nav className="flex flex-col text-gray-400 gap-2 pt-8 font-medium text-sm">
         <ul className=" flex gap-3 flex-col">
-          <li className="text-gray-700 flex align-center gap-1">
-            <box-icon type="solid" name="dashboard"></box-icon>
-            <a href="">Dashboard</a>
-          </li>
-          <li className="flex align-center gap-1">
-            <box-icon name="task" color="rgb(156 163 175)"></box-icon>
-            <a href="">Tasks</a>
-          </li>
-          <li className="flex align-center gap-1">
-            <box-icon name="buildings" color="rgb(156 163 175)"></box-icon>
-            <a href="">Companies</a>
-          </li>
-          <li className="flex align-center gap-1">
-            <box-icon name="cog" color="rgb(156 163 175)"></box-icon>
-            <a href="">Settings</a>
-          </li>
+          {pages.map(({ title, iconName, path, iconType }, index) => {
+            return (
+              <NavItem
+                title={title}
+                iconName={iconName}
+                iconType={iconType}
+                path={path}
+                key={index}
+              />
+            );
+          })}
         </ul>
       </nav>
     </div>
